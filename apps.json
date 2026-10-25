@@ -30,12 +30,6 @@
       "repo": "https://github.com/brandomoore/Plozz"
     },
     {
-      "name": "Scrozz",
-      "tagline": "Screenshots that go where you need them",
-      "logo": "logos/scrozz.svg",
-      "repo": "https://github.com/brandomoore/Scrozz"
-    },
-    {
       "name": "Strozz",
       "tagline": "Twitch on Apple TV, with real emotes",
       "logo": "logos/strozz.svg",

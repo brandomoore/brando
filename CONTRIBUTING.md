@@ -49,6 +49,10 @@ Edit **`apps.json`** — that is the only file to touch to rename an app, reword
 tagline, repoint a link, or add a fifth app. If you changed a name or a logo,
 run `python3 tools/build-lockups.py` first (see below).
 
+`apps.json` is the curated promotion list, not a project-status registry.
+Removing an app from it does not archive its repository or remove its assets.
+Keep its entry in `repos.json` if its README should still receive footer updates.
+
 ```bash
 node tools/sync-footer.mjs           # rewrite the footer in every repo
 node tools/sync-footer.mjs --check   # CI-friendly: fail if a README is stale
