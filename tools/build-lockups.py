@@ -133,7 +133,8 @@ def main() -> None:
                 f'  <g transform="translate({ICON + GAP} {baseline:.3f})" fill="{ink}">{d}</g>\n'
                 f"</svg>\n"
             )
-            (OUT / f"{Path(app['logo']).stem}-{mode}.svg").write_text(svg)
+            for stem in [Path(app["logo"]).stem, *app.get("legacyLogoStems", [])]:
+                (OUT / f"{stem}-{mode}.svg").write_text(svg)
 
         print(f"{name:8} {width:6.1f} x {ICON}")
 

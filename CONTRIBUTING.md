@@ -36,6 +36,13 @@ node tools/sync-footer.mjs
 Changing only a tagline, link, or the heading needs just the sync — taglines
 are link tooltips, not drawn art.
 
+Use `logos/strozz.svg` and `logos/lockups/strozz-{light,dark}.svg` for Strozz.
+The old `twozz.svg` icon URL remains available for existing consumers.
+`legacyLogoStems` in `apps.json` also keeps the published `twozz-{light,dark}.svg`
+lockup URLs working, with the current Strozz wordmark rather than the old name.
+Check generated asset names and compatibility aliases with
+`python3 -m unittest discover -s tools/tests`.
+
 ## Changing the footer
 
 Edit **`apps.json`** — that is the only file to touch to rename an app, reword a
@@ -58,8 +65,8 @@ The script assumes the sibling repos are checked out next to this one:
 
 ```
 Development/
-  brand/        <- this repo (thatcube/brando)
-  Plozz/  Mozz/  hozz/  Twizz/  plozz-website/  ...
+  brando/       <- this repo (brandomoore/brando)
+  Plozz/  Mozz/  hozz/  strozz/  plozz-website/  ...
 ```
 
 If yours live elsewhere, edit the paths in `repos.json`.
